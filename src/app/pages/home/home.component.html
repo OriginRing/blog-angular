@@ -1,0 +1,24 @@
+<div class="article">
+  <div class="content">
+    <h1>
+      originRing 的技术文章
+    </h1>
+    <ng-container *ngFor="let article of list | slice: (page - 1) * pageSize : page * pageSize" >
+      <a [routerLink]="['/', 'article', article.id]">
+        <figure>
+          <img src="https://tools.jiyik.com/demo_source/demo2.jpeg" width="250" height="150">
+          <figcaption>
+            <h5>{{article.name}}</h5>
+            <p>{{article.introduce}}{{article.introduce}}{{article.introduce}}{{article.introduce}}{{article.introduce}}{{article.introduce}}{{article.introduce}}</p>
+            <span>
+              <span class="author"><b>作者:</b> {{article.author || '-'}}</span>
+              <span class="date"><b>时间: </b>{{ article.date | date: "yyyy-MM-dd" || '-'}}</span>
+            </span>
+          </figcaption>
+        </figure>
+      </a>
+    </ng-container>
+    <app-pagination [total]="total" [page]="page" (articleListChange)="articleListChange($event)"></app-pagination>
+  </div>
+</div>
+

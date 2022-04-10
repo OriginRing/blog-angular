@@ -1,0 +1,7 @@
+<div class="pagination" *ngIf="total !== 0">
+  <a [class.disable]="preDisable()" (click)="pre()">上一页</a>
+  <ng-container *ngFor="let i of pagination">
+    <a [class.active]="page === i" (click)="paginationClick(i)">{{i === 0 ? '···' : i}}</a>
+  </ng-container>
+  <a [class.disable]="nextDisable()" (click)="next()">下一页</a>
+</div>

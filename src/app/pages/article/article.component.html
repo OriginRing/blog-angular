@@ -1,0 +1,10 @@
+<div class="article">
+  <div class="content">
+    <h1>{{detail.name}}</h1>
+    <p class="author-date">
+      <span class="author">作者：{{detail.author || '-'}}</span>
+      <span class="date">时间：{{detail.date | date: "yyyy-MM-dd" || '-'}}</span>
+    </p>
+    <div [innerHtml]="detail.content"></div>
+  </div>
+</div>

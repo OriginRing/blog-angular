@@ -1,0 +1,24 @@
+:host {
+  .pagination {
+    text-align: right;
+    margin-top: 24px;
+    a {
+      margin: 0 4px;
+      border: 1px solid #f6f6f6;
+      padding: 8px 12px;
+      &:hover {
+        color: #fff;
+        background: #f07;
+      }
+      &.active {
+        color: #fff;
+        background: #f07;
+      }
+      &.disable {
+        pointer-events: none;
+        cursor: not-allowed;
+        opacity: 0.6;
+      }
+    }
+  }
+}
