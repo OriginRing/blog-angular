@@ -14,5 +14,6 @@ export interface article{
   date?: string;
   author?: string;
   introduce?: string;
-  content?: string
+  content?: string,
+  image?: string
 }

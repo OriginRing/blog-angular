@@ -6,7 +6,7 @@
     <ng-container *ngFor="let article of list | slice: (page - 1) * pageSize : page * pageSize" >
       <a [routerLink]="['/', 'article', article.id]">
         <figure>
-          <img src="https://tools.jiyik.com/demo_source/demo2.jpeg" width="250" height="150">
+          <img src="./assets/demo2.jpeg" width="250" height="150">
           <figcaption>
             <h5>{{article.name}}</h5>
             <p>{{article.introduce}}{{article.introduce}}{{article.introduce}}{{article.introduce}}{{article.introduce}}{{article.introduce}}{{article.introduce}}</p>
